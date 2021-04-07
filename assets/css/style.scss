@@ -39,3 +39,28 @@ p#useless{
   border-top: 1px solid #111;
   border-bottom: 1px solid #111
 }
+
+#PP{
+  position: fixed;
+  top: 1px;
+  right: 1px;
+  color: white;
+}
+
+#PP:hover{
+   text-decoration: none;
+}
+
+#others{
+   position: fixed;
+   top: 20px;
+   right: 1px;
+   font-size: 14px;
+}
+
+#more{
+   position: fixed;
+   top: 45px;
+   font-size: 18.5px;
+   right: 1px;
+}
