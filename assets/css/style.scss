@@ -79,3 +79,11 @@ p#useless{
   border-radius: 0px 0px 12px 12px;
   right: unset;
 }
+
+#mentions_content.inner{
+  position: fixed;
+  top: 0px;
+  left: 1px;
+  color: black;
+  text-align:center;
+}
