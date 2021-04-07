@@ -3,6 +3,6 @@
 
 @import "{{ site.theme }}";
 
-body, #header_wrap{
+body, #header_wrap, #footer_wrap{
   background: pink;
 }
