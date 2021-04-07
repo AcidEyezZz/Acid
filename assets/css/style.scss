@@ -29,7 +29,7 @@ p#useless{
   height: auto;
   position: fixed;
   left: 10px;
-  bottom: 350px;
+  bottom: 310px;
   border: 2px solid #000;
   background: black;
 }
@@ -80,9 +80,13 @@ p#useless{
   right: unset;
 }
 
-#mentions_content.inner{
-  top: 0px;
-  left: 0px;
+#mentions_content.inner {
+  top: -50px;
+  left: -0px;
   color: black;
-  text-align:center;
+  text-align: left;
+}
+
+#main_content{
+  padding-top: 0px;
 }
