@@ -1,0 +1,505 @@
+/* Section - I - GAME */ 
+
+/* Deletes */
+
+#voiceDisplay {
+	display: none;
+}
+#mapInfo {
+	display: none;
+}
+#termsInfo {
+	display: none;
+}
+
+/* Temp */
+
+#bottomLeftHolder {
+	background-color: white;
+	height: 430px;
+	width: 360px;
+	box-shadow: 4px 4px 0px 0px grey;
+	z-index: -1;
+}
+
+/* Hud Class Icon */
+
+#hudClassIcon {
+	background-color: transparent;
+	content: url(https://cdn.discordapp.com/attachments/706914511000698890/828532434416959488/VRmJibQlq695csKIU00E2iPoqcy9jSyBbeFr5sFcI70.png);
+	height: 300px;
+	width: 300px;
+	position: relative;
+	left: 25px;
+	top: 20px;
+	border: dotted pink 7px;
+	padding-top: 5px
+}
+
+/* Health Bar */
+
+#healthBar {
+    position: absolute;
+    display: inline-flex;
+    width: 320px;
+    height: 7px;
+    bottom: 23px;
+    z-index: -1 ;
+	left: 20px;
+    background-color: rgba(0,0,0,0.4);
+	border-radius: 15px;
+}
+.healthBarSeg {
+    margin: 0px -1px;
+    border-radius: 0;
+    width: -webkit-fill-available;
+}
+.hpBSeg {
+    border-radius: 0;
+	background-color: pink!important;
+    box-shadow: none;
+}
+
+/* Health */
+
+#maxHP {
+	display: none;
+}
+#healthValueHolder {
+	background-color: transparent;
+}
+#healthValue {
+	color: #000000d1!important;
+	font-size: 25px;
+	position: relative;
+	top: 35px;
+	left: 15px;
+}
+#healthValue::after {
+	content: 'H';
+	color: pink;
+}
+#challIcon {
+	display: none;
+}
+
+/* Ammo */
+
+#ammoDisplay {
+    position: fixed;
+    bottom: 47.5%;
+    left: calc(50% - 35px);
+    transform: none;
+    width: 70px;
+    height: 5px;
+    padding: 0px;
+    background-color: transparent;;
+    border-radius: 5px;
+	background-image: linear-gradient(90deg, pink, white);
+}
+
+#ammoMax {
+    display: none;
+}
+#ammoVal {
+    position: fixed;
+    bottom: 65px;
+    font-size: 25px;
+    left: 300px;
+	color: black;
+	z-index: 1;
+}
+#ammoVal::after {
+	content: 'A';
+	position: relative;
+	left: 9px;
+	color: pink;
+}
+#ammoIcon {
+    position: fixed;
+    bottom: 1%;
+    font-size: 70px;
+    left: calc(50% + 20px);
+    transform: scale(0.6);
+    filter: brightness(5);
+	visibility: hidden;
+}
+
+/* Weapon */
+
+#weapDisplay {
+    bottom: 0px;
+}
+
+.weapItem {
+    position: fixed;
+    bottom: 45px;
+    left: 130px;
+	transform: scale(0.7);
+	filter: drop-shadow(2px 2px 3px pink);
+}
+.weapIcon {
+    opacity: 0 !important;
+    transition-duration: 0.25s;
+    height: 0;
+}
+.weapIcon[style*="1"] {
+    opacity: 1 !important;
+    height: 70px;
+}
+#weapIconMel {
+    margin: 0 !important;
+}
+.weapKey {
+    display: none;
+}
+
+/* Chat */
+
+#chatHolder {
+	left: unset;
+    right: 20px;
+    bottom: 10px!important;
+	width: 320px;
+	border-radius: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+.chatMsg {
+	font-size: 20px;
+	width: 330px!important;
+	left: 20px;
+	color: pink
+}
+.chatItem {
+	border-radius: 0;
+	background-color: #fff !important;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	font-size: 18px;
+	max-width: 280px;
+	width: 280px !important;
+	box-shadow: 4px 4px 0px 0px grey;
+	border: solid pink;
+}
+.chatMsg [style="color:#76ff03"] {
+	color: pink!important;
+}
+.chatMsg [style="color:#9eeb56"] {
+	color: blue!important;
+}
+.chatMsg [style="color:#eb5656"] {
+	color: red!important;
+}
+.chatMsg [style="color:#fc03ec"] {
+	color: pink!important;
+}
+.chatMsg [style="color:#fff"] {
+	color: blue!important;
+}
+#chatInput {
+	width: 0px;
+	opacity: 0;
+	transition: 0.5s;
+    border-bottom: solid pink;
+	background-color: transparent;
+	text-align: center;
+	height: 50px;
+	padding-bottom: 5px;
+	font-size: 20px;
+}
+#uiBase.onGameM #chatInput {
+    opacity: 0;
+}
+#uiBase.onMenu #chatInput {
+	width: 330px;
+	opacity: 1;
+}
+
+/* CurGameInfo */
+
+#curGameInfo {
+	font-size: 20px;
+	text-shadow: 1px 1px 1px pink;
+	bottom: 5px;
+	left: -6px;
+	position: relative
+	
+}
+#curGameInfo div[style="color:rgba(255,255,255,0.6)"] {
+    display: none
+}
+
+/* Timer */
+
+#timerIcon {
+	display: none;
+}
+#timerDisplay {
+	background-color: rgb(255, 255, 255);
+	position: relative;
+	left: -5px;
+	border-radius: 0px;
+	border: solid pink;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#timerVal {
+	font-size: 50px;
+	color: pink;
+}
+
+/* Fps/Ping */
+
+#pingText:after {
+    content: ' PING';
+    color: white;
+	font-size :25px;
+	text-shadow: 1px 1px 1px pink
+}
+
+#pingText {
+    color: pink;
+	font-size :25px;
+	position: fixed;
+	bottom: 470px;
+	left: 25px;
+	text-shadow: none;
+}
+
+#pingDisplay .material-icons {
+    display: none;
+}
+
+#fpsDisplay {
+    color: white;
+	font-size :25px;
+	position: fixed;
+	bottom: 495px;
+	left: 25px;
+	text-shadow: 1px 1px 1px pink
+}
+
+#ingameFPS {
+    color: pink!important;
+	font-size :25px;
+	text-shadow: none;
+}
+
+/* Leader board */
+
+#leaderDisplay {
+	background-color : #fff;
+	border-radius: 0px;
+	padding-top: 35px;
+	border: solid pink;
+}
+.leaderNameF {
+	color: blue;
+}
+.leaderScore {
+    color: black!important;
+}
+.leaderNameM {
+    color: black!important;
+}
+.leaderCounter {
+    color: black!important;
+}
+#leaderDisplay::after {
+    content: 'LEADERBOARD';
+    background-color: #fff;
+	font-size: 18px;
+	color: #000;
+	position: fixed!important;
+    right: 280px;
+	top: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 3px;
+	border: solid pink;
+}
+
+/* Points */
+
+.topRightCounters {
+    width: auto!important;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 17px;
+    left: 385px
+}
+.countIcon {
+    background-color: transparent;
+    width: max-content;
+}
+#killsVal, #deathsVal, #streakVal, #kdVal, #myScoreVal, #livesDisp {
+    color: pink!important
+}
+#killsVal::after {
+    content: ' K';
+    color: white;
+}
+#deathsVal::after {
+    content: ' D';
+    color: white;
+}
+#streakVal::after {
+    content: ' S';
+    color: white;
+}
+#kdVal::after {
+    content: ' K/D';
+    color: white;
+}
+#myScoreVal::after {
+    content: ' P';
+    color: white;
+}
+#livesDisp::after {
+    content: ' L';
+    color: white;
+}
+#killsIcon,
+#deathsIcon,
+#streakIcon,
+#kdIcon {
+    display: none;
+}
+#livesCount .material-icons {
+    display: none;
+}
+#scoreCount .material-icons {
+    display: none;
+}
+
+/* Reload */
+
+#reloadMsg {
+	visibility: hidden!important;
+}
+#reloadMsg::after {
+	visibility: visible!important;
+	content: url(https://cdn.discordapp.com/attachments/777216354112765952/829219505011032096/1_1.png)!important;
+	position: absolute!important;
+	left: -130px!important;
+	bottom: 10%!important;
+	transform: scale(0.2)!important
+}
+
+/* Team Points */
+
+#teamScores {
+	position: fixed;
+	top: 5px;;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+	padding-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: transparent;
+}
+.tScore {
+	display: inline-block;
+}
+#tScoreV1 {
+	position: fixed;
+	left: -55%;
+	top: 5px;
+	font-size: 30px;
+}
+#tScoreV2 {
+	position: fixed;
+	left: 55%;
+	top: 5px;
+	font-size: 30px;
+}
+.tScoreT {
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+	z-index: 2;
+}
+.tScoreM {
+	display: none;
+}
+.tScoreF {
+	width: 100px;
+	height: 95px;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #000 !important;
+	color: transparent;
+	z-index: 1;
+	transform: scale(0.25);
+	clip-path: circle(50% at 50% 50%);
+	position: relative;
+	top: -5px;
+}
+.tScoreF.you {
+	background-color: pink!important;
+	color: transparent;
+	z-index: 1;
+	clip-path: circle(50% at 50% 50%);
+	transform: scale(0.25);
+	position: relative;
+	top: -5px;
+}
+.tScoreC {
+	width: 100px;
+	height: 95px;
+	margin-left: 0;
+	margin-right: 0;
+	background-color: #000!important;
+	z-index: 1;
+	transform: scale(0.25);
+	clip-path: circle(50% at 50% 50%);
+	position: relative;
+	top: -5px;
+}
+.tScoreC.you {
+	background-color: pink!important;
+	z-index: 1;
+	transform: scale(0.25);
+	clip-path: circle(50% at 50% 50%);
+	position: relative;
+	top: -5px;
+}
+#teamScores::before {
+    content: '';
+    background-color: #fff;
+	width: 300px;
+	height: 50px;
+	left: 50%;
+	top: 15px;
+    transform: translate(-50%);
+    position: fixed;
+	padding: 4px;
+	padding-bottom: 0px;
+	border: solid pink;
+}
+#gameMessage {
+	top: 100px;
+	text-transform: uppercase!important
+}
