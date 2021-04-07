@@ -1,2 +1,2 @@
-# Krunker-CSS-
+# Krunker
 For krunker css
