@@ -1,0 +1,561 @@
+/* Colors */
+:root{
+    --accent: #9b9bff;
+    --bgcolor: white;
+}
+
+/* Main Shit */
+@font-face {
+    font-family: gamefont;
+    src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2);
+}
+
+#androidDB, #iosDB, #steamDB, #aContainer, #rightABox {
+    display: none !important
+}
+
+#onetrust-consent-sdk {
+    display: none;
+}
+
+#backgroundImage{
+    background-image: linear-gradient(-45deg, var(--accent), white)
+}
+/* Main Bars */
+
+#navBar, #chatScroller{
+    background: var(--bgcolor);
+}
+
+#navBar{
+    transform: translateY(-90px) skew(0deg, 0deg);
+    transition-duration: 0.25s;
+    z-index: 999999;
+}
+
+#navBar:hover{
+    transform: translateY(-20px) skew(0deg, -1deg);
+    height: 100px;
+    display: inline-block;
+    bottom: 0px;
+}
+
+#navBar:hover #navTitle, #navBar:hover #navButtons{
+    margin-top: 30px;
+}
+
+#navBar:hover #profileInfo{
+    margin-top: 15px;
+}
+
+#navBar:hover:after, #navBar:hover:before{
+    opacity: 0;
+}
+
+#navBar:after{
+    content: '';
+    height: 40px;
+    width: 10px;
+    border-left: 10px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 100px;
+    bottom: unset;
+    right: 50%;
+    transform: translate(-50%) rotate(270deg);
+    opacity: 1;
+    transition-duration: 0.25s;
+}
+
+#navBar:before{
+    content: '';
+    height: 0px;
+    width: 60px;
+    border-bottom: 35px solid #ff000000;
+    border-top: 35px solid #ff000000;
+    position: absolute;
+    top: 90px;
+    bottom: unset;
+    right: 48.25%;
+    transform: translate(-50%) rotate(90deg); 
+    opacity: 1;
+    transition-duration: 0.25s;
+}
+
+#chatScroller{
+    top: -3px;
+    z-index: -1;
+    transform: translateX(-40px) skew(-4deg, 4deg);
+    width: 100px;
+    overflow: hidden scroll;
+}
+
+#profileName, #navTitle{
+    color: var(--accent);
+    text-shadow: 0 0 2px #202225, 3px 2px 0 #202225;
+}
+
+#searchBtn{
+   text-shadow: 0 0 3px #202225, 2px 2px 0 #202225;
+ }
+
+#searchBtn{
+    font-size: 19px;
+}
+
+#searchPInput{
+    border: 2px solid black;
+    border-radius: 9px;
+}
+
+#searchPInput::placeholder{
+    color: white!important;
+    text-shadow: 0 0 3px #202225, 3px 2px 0 #202225;
+}
+
+#hubBox{
+    background: var(--accent);
+    color: black;
+    text-shadow: none;
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+#navTitle, #hubBox{
+    transition-duration: 0.25s;
+}
+
+#navTitle:hover #hubBox{
+    background: orange;
+}
+
+#navTitle:hover{
+    color: black;
+    text-shadow: none;
+}
+
+.material-icons.mic1{
+    color: var(--accent)
+}
+
+img[src="/img/crossed_swords_0.svg"]{
+    content: url('https://cdn.discordapp.com/attachments/825919040252805160/828419874048966736/crossed_swords_0.png')
+}
+
+/* Chat Thing */
+
+.chatBlobImg{
+    background: var(--accent);
+}
+
+/* Kr and name */
+
+#profileKR{
+    color: var(--accent);
+    font-size: 20px !important;
+}
+
+#profileKR span{
+    color: black !important;
+    text-shadow: none
+}
+
+/* Post */
+
+.scrollItem{
+    background: var(--bgcolor) !important;
+    box-shadow: 8px 6px var(--accent);
+    transform: skew(0deg, -1deg);
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+
+#postButton{
+    background: var(--accent);
+    color: white;
+    text-shadow: 0 0 3px #202225, 3px 2px 0 #202225;
+    font-size: 16px;
+    transition-duration: 0.25s;
+    transform: skew(0deg, -1deg);
+    text-align: left;
+    text-indent: 10px;
+}
+
+#givaButton .material-icons{
+    color: white !important;
+}
+
+#givaButton {
+    background: var(--accent);
+    transform: skew(1deg, 2deg);
+    bottom: -11px !important;
+    position: absolute;
+    left: 30px;
+    bottom: unset;
+    top: 110px;
+}
+
+#postProf, #postInput{
+    border-radius: 9px;
+    border: 2px solid black;
+    transition-duration: 0.25s;
+}
+
+#postInput::placeholder{
+    color: white;
+    text-shadow: 0 0 3px #202225, 3px 2px 0 #202225;
+    transition-duration: 0.25s;
+}
+
+#postInput:focus, #postProf:hover{
+    border: 2px solid var(--accent)
+}
+
+#postInput:focus::placeholder{
+    color: var(--accent)!important;
+}
+
+#postButton:hover{
+    box-shadow: 6px 6px black;
+    color: black;
+    text-shadow: none;
+}
+
+#feedHolder.centerHolder{
+    height: 1400px;
+    top: 110px;
+}
+
+/* Feed Buttons */
+
+.feedTab{
+    transform: skew(0deg, -2deg);
+    box-shadow: none;
+    color: var(--accent)
+}
+
+.feedTab .material-icons{
+    color: var(--accent)
+}
+
+.feedTabA{
+    opacity: 1;
+    box-shadow: 6px 4px var(--accent);
+    color: black
+}
+
+.feedTabA .material-icons{
+    color: black
+}
+
+#leftABox, #leftYTBox, #rightFollBox{
+    background: var(--bgcolor);
+    box-shadow: 7px 5px var(--accent);
+    transform: skew(0deg, -1deg);
+}
+
+.sideBarHeader, .sideBarItem{
+    color: black !important
+}
+
+.sideBarItem [style="color:rgba(255,255,255,0.4);font-size:12px"]{
+    color: black !important;
+    font-size: 15px !important
+}
+
+.reqFollB{
+    background: var(--accent);
+    text-shadow: 0 0 3px #202225, 3px 2px 0 #202225;
+    transition-duration: 0.25s;
+}
+
+.reqFollB:hover{
+     box-shadow: 5px 5px black;
+     background: var(--accent);
+     color: black;
+     text-shadow: none;
+}
+
+#leftAdHol{
+    top: 130px;
+}
+
+#rightAdHol{
+    top: 95px;
+}
+
+/* Other Posts */
+
+.socPost{
+    background: var(--bgcolor);
+    box-shadow: 7px 5px var(--accent);
+    transform: skew(0deg, -1deg);
+}
+
+.postContent{
+    border: 2px solid black;
+    background: transparent;
+    border-radius: 9px;
+    transition-duration: 0.25s;
+}
+
+.postContent:hover{
+    border: 2px solid var(--accent)
+}
+
+.postLink [href*="/social.html?p=profile&q="]{
+    color: var(--accent) !important;
+    text-shadow: 0 0 3px #202225, 3px 2px 0 #202225;
+    font-size: 18px;
+}
+
+.shareBtnHol{
+    background: var(--accent);
+    color: black;
+    transition-duration: 0.25s;
+    margin-top: -10px;
+}
+
+.shareBtnHol:hover{
+    box-shadow: 4px 5px black;
+    opacity: 1;
+    color: white;
+}
+
+.likesHolder{
+    transform: skew(0deg, -1deg);
+    margin-top: 20px;
+}
+
+/* Market Buttons */
+
+.leaderNav{
+    transform: skew(0deg, -1deg); 
+}
+
+.leaderBtn[style="background-color: rgba(0, 0, 0, 0.5);"], #marketSearchB, #m_stats, #m_blackm, #invSortB{
+    box-shadow: 4px 5px black;
+    opacity: 1;
+    color: black !important;
+    background: var(--accent) !important
+}
+
+#m_blackm{
+    margin-left: -10px;
+}
+
+.leaderBtn{
+    color: var(--accent) !important
+}
+
+/* Leader View thing */
+
+.leaderNav2{
+    position: fixed;
+    bottom: -100px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%)  skew(0deg, -1deg);
+    clip-path: none;
+    border-radius: 9px;
+    background: white;
+    width: 650px;
+    box-shadow: 7px 6px var(--accent);
+}
+
+.leaderBtn2{
+    background: black;
+    border-radius: 6px;
+    font-size: 15px;
+    transition-duration: 0.25s;
+}
+
+.leaderBtn2:hover{
+     box-shadow: 4px 3px black;
+     color: black;
+     background: var(--accent)
+}
+
+.lName[href*="/social.html?p=profile&q="]{
+    color: var(--accent) !important
+}
+
+/* Profile Page */
+
+.scrollItemNew{
+    box-shadow: 7px 6px var(--accent);
+    border-radius: 9px;
+    background: white;
+    transform: skew(0deg, -1deg);
+}
+
+.profileNav{
+    box-shadow: 7px 6px var(--accent);
+    border-radius: 9px;
+    background: white;
+    transform: skew(0deg, -1deg);
+    margin-bottom: 16px;
+}
+
+.pTabA{
+    box-shadow: none;
+    color: var(--accent);
+    font-size: 21px;
+    text-align: center;
+    bottom: 10px;
+}
+
+#tradeBtn, .unfollow, #giftBtn{
+    background: black;
+    border: none;
+    font-size: 13px;
+    transform: skew(0deg, -1deg);
+    transition-duration: 0.25s;
+}
+
+#tradeBtn:hover{
+   box-shadow: 3px 5px #2196f3;
+}
+
+.unfollow:hover{
+   box-shadow: 3px 5px #ff4747; 
+}
+
+ #giftBtn:hover{
+    box-shadow: 3px 5px #41c300
+}
+
+.pTabA:hover, .profileTab:hover{
+    box-shadow: none !important;
+    color: var(--accent);
+}
+
+.xpBar{
+    border-radius: 9px;
+}
+
+.xpBarB{
+    background: white;
+    border-radius: 9px
+}
+
+.xpBarV{
+    color: var(--accent) !important;
+    font-size: 19px;
+    text-align: left; 
+    text-indent: 10px;
+    text-shadow: none;
+}
+
+.xpBarV::after{
+    content: ' XP'
+}
+
+.pSt{
+    font-size: 18px;
+    height: auto;
+    width: auto;
+    text-shadow: none;
+    border: 1px solid black;
+}
+
+.pSt strong{
+    color: black;
+    font-size: inherit;
+}
+
+.classCard{
+    background: white;
+}
+
+.classWeap, .className{
+    color: black;
+    font-size: 15px;
+    text-shadow: none
+}
+
+.classLvl{
+    font-size: 15px;
+}
+
+.clsXPBarV{
+    color: white;
+    font-size: 13px;
+    text-align: start;
+    text-indent: 10px;
+}
+
+.clsXPBarV::after{
+    content: ' XP';
+}
+
+.clsXPBarC{
+    background: var(--accent)
+}
+
+.graphHeader{
+    background: white;
+}
+
+.dateBtn[style="background-color:rgba(0, 0, 0, 0.6)"]{
+    color: black !important;
+    background: var(--accent) !important;
+    box-shadow: 3px 5px black; 
+}
+
+.dateBtn{
+    background: black;
+}
+
+.leaderBtn{
+    transition-duration: 0.25s;
+}
+
+.leaderBtn:hover{
+    text-decoration: none;
+    background: black !important;
+    color: var(--accent);
+    box-shadow: 3px 5px var(--accent); 
+}
+
+.sliderM {
+    background-color: rgba(0,0,0,0.12);
+    height: 12px;
+}
+
+.sliderM::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--bg-color);
+}
+
+.sliderVal {
+    background-color: #000;
+    border-radius: 0px;
+}
+
+.slider {
+    background-color: transparent !important;
+}
+
+.slider:before {
+    position: absolute;
+    content: "Off";
+    line-height: 36px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+}
+
+input:checked+.slider:before {
+    transform: unset;
+    content: "On";
+    font-size: 24px;
+    color: var(--accent);
+    overflow: hidden;
+}
