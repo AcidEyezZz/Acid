@@ -28,9 +28,11 @@ p#useless{
   width: 155px;
   height: auto;
   right: 10px;
-  bottom: 310px;
+  bottom: 30px;
   border: 2px solid #000;
   background: black;
+  position: absolute;
+  box-shadow: 0 0 8px 6px #ff98ff;
 }
 
 #price_content_wrap{
@@ -92,4 +94,9 @@ p#useless{
 
 header.inner, footer.inner,#main_content.inner, #price_content.inner, #mentions_content.inner{
   max-width: 100%;
+}
+
+a#server{
+  color: #ff98ff;
+  text-decoration: underline;
 }
