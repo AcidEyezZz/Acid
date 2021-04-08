@@ -227,6 +227,11 @@ head::after {
   }
 }
 
-#title{
-  color: white
+#title {
+  color: #fff;
+  text-shadow: #fff 0px 0px 10px;
+}
+
+#main_content.inner, #price_content.inner{
+  color: black
 }
