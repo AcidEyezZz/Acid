@@ -36,7 +36,7 @@ p#useless{
 }
 
 #price_content_wrap{
-  background: #f2f2f2;
+  background: pink;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111
 }
@@ -92,6 +92,10 @@ p#useless{
 
 #main_content{
   padding-top: 0px;
+}
+
+#main_content_wrap{
+  background-color: pink;
 }
 
 header.inner, footer.inner,#main_content.inner, #price_content.inner, #mentions_content.inner{
